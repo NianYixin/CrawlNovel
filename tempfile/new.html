@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>全部作品_起点中文网</title>
+    <meta name="description" content="小说阅读,精彩小说尽在起点中文网. 起点中文网提供玄幻小说,武侠小说,原创小说,网游小说,都市小说,言情小说,青春小说,历史小说,军事小说,网游小说,科幻小说,恐怖小说,首发小说,最新章节免费">
+    <meta name="keywords" content="小说,小说网,玄幻小说,武侠小说,都市小说,历史小说,网络小说,言情小说,青春小说,原创网络文学">
+    <meta name="robots" content="all">
+    <meta name="googlebot" content="all">
+    <meta name="baiduspider" content="all">
+    <meta http-equiv="mobile-agent" content="format=wml; url=http://m.qidian.com">
+    <meta http-equiv="mobile-agent" content="format=xhtml; url=http://m.qidian.com">
+    <meta http-equiv="mobile-agent" content="format=html5; url=http://h5.qidian.com/bookstore.html">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit" />
+    
+    <script>
+        document.domain = 'qidian.com';
+    </script>
+    <!-- start speedTimer[var, zero] -->
+    <script>
+        var speedTimer = [],
+            speedZero = new Date().getTime();
+    </script>
+    <!-- end speedTimer[var, zero] -->
+    <!-- start 通用头逻辑 -->
+    <script>
+    //遇到cookie tf=1的话留在本站，否则跳转移动站
+    if (getCookie('tf') != 1) {
+        //判断是以下设备后跳转到m站
+        if (navigator.userAgent.match(/(iPhone|iPod|Android)/i)) {
+            location.href = "//m.qidian.com"
+        }
+    }else {
+        // M站设置了一年，这里fixed
+        setCookie('tf', 1, 'qidian.com', '/', 0);
+    }
+
+    // start 防劫持
+    //设置cookie
+    function setCookie(name, value, domain, path, expires) {
+        if(expires){
+            expires = new Date(+new Date() + expires);
+        }
+        var tempcookie = name + '=' + escape(value) +
+                ((expires) ? '; expires=' + expires.toGMTString() : '') +
+                ((path) ? '; path=' + path : '') +
+                ((domain) ? '; domain=' + domain : '');
+
+        //Ensure the cookie's size is under the limitation
+        if(tempcookie.length < 4096) {
+            document.cookie = tempcookie;
+        }
+    }
+
+    //获取cookie
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+        if (arr = document.cookie.match(reg))
+
+            return (arr[2]);
+        else
+            return null;
+    }
+
+    //创建并发送请求
+    function createSender(url){
+        var img = new Image();
+        img.onload = img.onerror = function(){
+            img = null;
+        };
+        img.src = url;
+    };
+
+    (function(){
+        /*
+         *防劫持逻辑所需参数在此处设置参数即可
+         *cookieName:用于记录连续被劫持的次数，为防止死循环，cookie值为3以上则不进行url重置
+         *cookieDomain:cookie所在的域
+         *reportUrl:非连续性劫持时上报的接口地址【如无需上报，可不填】
+         *reportUrl2：连续性劫持时上报的接口地址【如无需上报，可不填】
+         */
+        var cookieName = 'hiijack';
+        var cookieDomain = '.qidian.com';
+        var reportUrl = '//book.qidian.com/ajax/safe/hiijackReport?times=1&_csrfToken='+ getCookie('_csrfToken')||'';
+        var reportUrl2 = '//book.qidian.com/ajax/safe/hiijackReport?times=3&_csrfToken='+ getCookie('_csrfToken')||'';
+
+        //判断是否被iframe
+        if (top.location !== self.location) {
+            //用于记录被劫持的次数
+            var countHijack;
+
+            //如果未设置cookie，则需要set一下cookie，否则获取此cookie的值
+            if(!getCookie(cookieName)){
+                setCookie(cookieName,0 ,cookieDomain, '', 30*24*60*60*1000);
+                countHijack = 0;
+            }else{
+                countHijack = parseInt(getCookie(cookieName));
+            }
+
+            //如果连续被劫持的次数大于等于3次，则发请求上报此情况,否则上报非连续性的情况,同时累加被劫持次数、重置当前url
+            if(countHijack >= 3){
+                reportUrl2 && reportUrl2!='' && createSender(reportUrl2);
+            }else{
+                reportUrl && reportUrl!=''&& createSender(reportUrl);
+                countHijack ++;
+                setCookie(cookieName, countHijack ,cookieDomain, '', 30*24*60*60*1000);
+                top.location = self.location;
+            }
+        }
+        //每次成功进入页面则计数清0
+        setCookie(cookieName, 0 ,cookieDomain, '', 30*24*60*60*1000);
+    })();
+    //end 防劫持
+</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="//qidian.gtimg.com/qd/favicon/qd_icon.0.2.ico">
+<link rel="Bookmark" type="image/x-icon" href="//qidian.gtimg.com/qd/favicon/qd_icon.0.2.ico">
+
+    <!-- end 通用头逻辑 -->
+    <link rel="stylesheet" data-ignore="true" href="//qidian.gtimg.com/c/=/qd/css/lbfUI/css/Checkbox.0.49.css,/qd/css/reset.0.50.css,/qd/css/global.0.24.css,/qd/css/font.0.54.css,/qd/css/header.0.71.css,/qd/css/module.0.84.css,/qd/css/list_module.0.59.css,/qd/css/all_finish.0.54.css,/qd/css/layout.0.51.css,/qd/css/qd_popup.0.56.css,/qd/css/footer.0.51.css,/qd/css/lbfUI/css/ComboBox.0.49.css,/qd/css/lbfUI/css/Button.0.51.css?v=201703161629" />
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+</head>
+<body>
+<!-- start 通用body层 -->
+<!-- start 微信分享小图标 -->
+<div class="share-img">
+    <img src="//qidian.gtimg.com/qd/images/common/share.0.3.png" width='300' height="300">
+</div>
+<!-- end 微信分享小图标 -->
+<!-- end 通用body层 -->
+
+<div class="wrap">
+    <!-- start 顶部导航 -->
+<div class="top-nav" data-l1="1">
+    <div class="box-center cf">
+        <div class="login-box fr">
+            <div class="sign-in hidden">
+                <span>你好，</span><a class="black" id="user-name" href="//me.qidian.com" target="_blank" data-eid="qd_A08"></a><em>|</em><a class="black" id="msg-btn" href="//me.qidian.com/msg/systems.aspx?page=1" target="_blank" data-eid="qd_A09">消息<cite id="msg-box">(<i></i>)</cite></a><em>|</em><a id="exit-btn" href="javascript:" data-eid="qd_A10">退出</a>
+            </div>
+            <div class="sign-out">
+                <a id="login-btn" class="black" href="javascript:" data-eid="qd_A06">登录</a><em>|</em><a id="reg-btn" href="//passport.qidian.com/reg.html?appid=10&areaid=1&target=iframe&ticket=1&auto=1&autotime=30&returnUrl=http%3A%2F%2Fwww.qidian.com" target="_blank" data-eid="qd_A07">注册</a>
+            </div>
+        </div>
+        <div class="nav-link fl">
+            <a class="act" href="//www.qidian.com" data-eid="qd_A01">起点中文网</a>
+            <a href="http://www.qdmm.com" target="_blank" data-eid="qd_A02">起点女生网</a><em>|</em>
+            <a href="http://chuangshi.qq.com" target="_blank" data-eid="qd_A03">创世中文网</a><em>|</em>
+            <a href="http://yunqi.qq.com" target="_blank" data-eid="qd_A04">云起书院</a><em>|</em>
+            
+            <a href="javascript:" id="switchEl" data-eid="qd_A182">繁体版</a><em>|</em>
+            <a class="black" id="back-old" href="javascript:" data-eid="qd_A05">返回旧版</a>
+        </div>
+    </div>
+</div>
+<!-- end 顶部导航 -->
+<!-- start logo & 搜索 -->
+<div class="logo-wrap box-center" data-l1="2">
+    <div class="box-center cf">
+        <div class="book-shelf fr">
+            <a href="//me.qidian.com/bookCase/bookCase.aspx?caseId=-2" target="_blank" data-eid="qd_A14"><em class="iconfont shelf">&#xe60c;</em><i>我的书架</i>
+            </a>
+        </div>
+        <div class="logo fl">
+            <a href="//www.qidian.com" data-eid="qd_A11"></a>
+        </div>
+        <div class="search-wrap fl">
+            <form id="formUrl" action="//se.qidian.com" method="get" target="_blank">
+                <p><input class="search-box" id="s-box" name="kw" type="text" placeholder="怪物乐园"></p>
+                <input class="submit-input" type="submit" id="searchSubmit" data-eid="qd_A13">
+                <label id="search-btn" class="search-btn" for="searchSubmit"><em class="iconfont" data-eid="qd_A13">
+                    &#xe60d;</em></label>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end logo & 搜索 -->
+    
+    <!-- start 主导航 -->
+    
+<!-- 判断navHighLight值，分别在导航中高亮 -->
+
+<div class="main-nav-wrap" data-l1="3">
+    <div class="main-nav box-center cf" id="type-hover">
+        <!-- Component Start 作品分类导航 模块 -->
+        <!-- start 作品分类导航-->
+<div class="classify-list fl so-awesome" id="classify-list" data-l1="3">
+    <dl>
+        <dd>
+            <a href="//xuanhuan.qidian.com/" target="_blank" data-eid="qd_A71">
+                <cite>
+                    <em class="iconfont">&#xe642;</em>
+                                    <span class="info">
+                                        <i>玄幻</i>
+                                        <b>559702</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd>
+            <a href="//qihuan.qidian.com/" target="_blank" data-eid="qd_A72">
+                <cite>
+                    <em class="iconfont">&#xe62f;</em>
+                                    <span class="info">
+                                        <i>奇幻
+                                        </i>
+                                        <b>116335</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd class="even">
+            <a href="//wuxia.qidian.com/" target="_blank" data-eid="qd_A73">
+                <cite>
+                    <em class="iconfont">&#xe632;</em>
+                                    <span class="info">
+                                        <i>武侠</i>
+                                        <b>31137</b>
+                                    </span>
+                </cite>
+            </a>
+
+            </dd>
+        <dd class="even">
+            <a href="//xianxia.qidian.com/" target="_blank" data-eid="qd_A74">
+                <cite>
+                    <em class="iconfont">&#xe610;</em>
+                                    <span class="info">
+                                        <i>仙侠</i>
+                                        <b>196376</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd>
+            <a href="//dushi.qidian.com/" target="_blank" data-eid="qd_A75">
+                <cite>
+                    <em class="iconfont">&#xe62c;</em>
+                                    <span class="info">
+                                        <i>都市</i>
+                                        <b>304908</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd>
+            <a href="//zhichang.qidian.com/" target="_blank" data-eid="qd_A76">
+                <cite>
+                    <em class="iconfont">&#xe614;</em>
+                                    <span class="info">
+                                        <i>职场</i>
+                                        <b>20443</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd class="even">
+            <a href="//junshi.qidian.com/" target="_blank" data-eid="qd_A77">
+                <cite>
+                    <em class="iconfont">&#xe602;</em>
+                                    <span class="info">
+                                        <i>军事</i>
+                                        <b>17554</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd class="even">
+            <a href="//lishi.qidian.com/" target="_blank" data-eid="qd_A78">
+                <cite>
+                    <em class="iconfont">&#xe62d;</em>
+                                    <span class="info">
+                                        <i>历史</i>
+                                        <b>63910</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd>
+            <a href="//youxi.qidian.com/" target="_blank" data-eid="qd_A79">
+                <cite>
+                    <em class="iconfont">&#xe634;</em>
+                                    <span class="info">
+                                        <i>游戏</i>
+                                        <b>87564</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd>
+            <a href="//tiyu.qidian.com/" target="_blank" data-eid="qd_A80">
+                <cite>
+                    <em class="iconfont tiyu">&#xe631;</em>
+                                    <span class="info">
+                                        <i>体育</i>
+                                        <b>8710</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd class="even">
+            <a href="//kehuan.qidian.com/" target="_blank" data-eid="qd_A81">
+                <cite>
+                    <em class="iconfont">&#xe603;</em>
+                                    <span class="info">
+                                        <i>科幻</i>
+                                        <b>114044</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd class="even">
+            <a href="//lingyi.qidian.com/" target="_blank" data-eid="qd_A82">
+                <cite>
+                    <em class="iconfont lingyi">&#xe641;</em>
+                                    <span class="info">
+                                        <i>灵异</i>
+                                        <b>45679</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd>
+            <a href="//www.qdmm.com/" target="_blank" data-eid="qd_A83">
+                <cite>
+                    <em class="iconfont">&#xe607;</em>
+                                    <span class="info">
+                                        <i>女生网</i>
+                                        <b>574340</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+        <dd>
+            <a href="//2cy.qidian.com/" target="_blank" data-eid="qd_A84">
+                <cite>
+                    <em class="iconfont erciyuan">&#xe617;</em>
+                                    <span class="info">
+                                        <i>二次元</i>
+                                        <b>72927</b>
+                                    </span>
+                </cite>
+            </a>
+        </dd>
+    </dl>
+</div>
+<!-- end 作品分类导航-->
+
+        <!-- Component End 作品分类导航 模块 -->
+        <ul>
+            <li class="first"><b><strong></strong></b><span><em>
+                <i></i>
+                <i></i>
+                <i></i>
+            </em>作品分类</span>
+            </li>
+            <li class="nav-li"><a href="//a.qidian.com" data-eid="qd_A15" class=act>全部作品</a></li>
+            <li class="nav-li"><a href="//r.qidian.com" data-eid="qd_A16" >排行</a></li>
+            <li class="nav-li"><a href="//fin.qidian.com" data-eid="qd_A17" >完本</a></li>
+            <li class="nav-li"><a href="//f.qidian.com" data-eid="qd_A18" >免费</a></li>
+            <li class="nav-li"><a href="http://write.qq.com/public/login.html" target="_blank" data-eid="qd_A19">作家专区</a>
+            </li>
+            <li class="nav-li"><a href="http://www.yuewen.com/app.html#appqd" target="_blank" data-eid="qd_A20"><b class="iconfont client">&#xe604;</b>客户端</a>
+            </li>
+            <!-- start 页游手游 -->
+            <li class="game phone" id="game-phone">
+    <a class="phone-game" href="http://sy.qidian.com" target="_blank" data-eid="qd_A22"><b class="iconfont webgame">
+        &#xe630;</b>手游</a>
+    <!-- start 手游下拉框 -->
+    <div class="game-dropdown hidden" id="phone-dropdown">
+        <cite></cite>
+        <dl class="phone-list">
+            
+            <dd>
+                <h3>
+                    
+                    <a href="" data-eid="qd_A39" target="_blank">传奇世界H5</a><i>正版授权</i></h3>
+                <p><a href="http://collect.game.qidian.com/Home/Stat/Index?gourl=aHR0cDovL3hzLnFpZGlhbi5jb20vYXBpL3N5eHMvc2dhbWUvUGxheS5waHA/Z2FtZWlkPTIwMDE0MyZzZXJ2ZXJpZD0xJnR5PTE=&amp;code=5733ed85f2cd0" target="_blank" data-eid="qd_A39"><img src="//qidian.qpic.cn/qidian_common/349573/267a8fa8f3805f970e1bac589d240cc9/0"><i class="op-tag"></i></a></p>
+            </dd>
+            
+            <dd>
+                <h3>
+                    
+                    <a href="" data-eid="qd_A40" target="_blank">乱逗三国</a><i>萌系SLG</i></h3>
+                <p><a href="http://collect.game.qidian.com/Home/Stat/Index?gourl=aHR0cDovL3hzLnFpZGlhbi5jb20vYXBpL3N5eHMvc2dhbWUvUGxheS5waHA/Z2FtZWlkPTIwMDUyMCZzZXJ2ZXJpZD0xJnR5PTE=&amp;code=5733edc4a3435" target="_blank" data-eid="qd_A40"><img src="//qidian.qpic.cn/qidian_common/349573/3e2cfcd29e5a8cd3c254bcd85adc42bc/0"><i class="op-tag"></i></a></p>
+            </dd>
+            
+            <dd>
+                <h3>
+                    
+                    <a href="" data-eid="qd_A41" target="_blank">洪荒霸业</a><i>角色扮演</i></h3>
+                <p><a href="http://collect.game.qidian.com/Home/Stat/Index?gourl=aHR0cDovL3N5LnFpZGlhbi5jb20vYXBpL3N5eHMvc2dhbWUvUGxheS5waHA/Z2FtZWlkPTIwMDUyOSZzZXJ2ZXJpZD0xMDAwMSZ0eT0x&amp;code=5769f94031529" target="_blank" data-eid="qd_A41"><img src="//qidian.qpic.cn/qidian_common/349573/78aa71ea5e2533687a89d729bc2599b1/0"><i class="op-tag"></i></a></p>
+            </dd>
+            
+        </dl>
+        <div class="bottom">
+            <h4>新游上线|众神大冒险</h4>
+            <p><a href="http://sy.qidian.com/api/syxs/sgame/Play.php?gameid=200534&amp;serverid=1&amp;ty=1&amp;qd_game_key=192x86&amp;qd_dd_p1=141" data-eid="qd_A42" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/e9f7b6c75235538f0d54300bc5cd8b0f/0" alt=""><i class="op-tag"></i></a></p>
+        </div>
+    </div>
+    <!-- end 手游下拉框 -->
+</li>
+<li class="game web" id="game-web">
+    <a class="web-game" href="http://game.qidian.com/" target="_blank" data-eid="qd_A21"><b class="iconfont">
+        &#xe60b;</b>页游</a>
+    <!-- start 页游下拉框 -->
+    <div class="game-dropdown hidden" id="web-dropdown">
+        <cite></cite>
+        <!-- start 页游列表 -->
+        <div class="web-game-list">
+            <!-- start 最近玩过 -->
+            <dl class="lately" id="lately">
+                <dt>最近玩过</dt>
+                <dd><a class="name" href="javascript:" target="_blank" data-eid="qd_A29"></a><strong></strong><a class="link" href="javascript:" target="_blank" data-eid="qd_A29">GO<i>&gt;</i></a></dd>
+                <dd><a class="name" href="javascript:" target="_blank" data-eid="qd_A30"></a><strong></strong><a class="link" href="javascript:" target="_blank" data-eid="qd_A30">GO<i>&gt;</i></a></dd>
+            </dl>
+            <!-- end 最近玩过 -->
+            <dl class="web-list" id="log-web-list">
+                <dt>今日开服</dt>
+                <dd class="act">
+                    <h3>
+                    
+                    <span></span>
+                    
+                    <i>3-20</i><a href="http://act.yy.game.qidian.com/Ad/Cpl/index/mark/6e26ead8e11c36ab6aeb096c3b162f42/name/wldf" data-eid="qd_A31" target="_blank">武炼巅峰</a><strong>14区</strong></h3>
+                    <p><a href="http://act.yy.game.qidian.com/Ad/Cpl/index/mark/6e26ead8e11c36ab6aeb096c3b162f42/name/wldf" data-eid="qd_A31" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/80937f4fec6892e5ea9447ab592b3bd9/0"><i class="op-tag"></i></a></p>
+                </dd>
+                
+                <dd>
+                    <h3>
+                        
+                        <span></span>
+                        
+                        <i>3-20</i><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=dtss" data-eid="qd_A32" target="_blank">大唐盛世</a><strong>5区</strong></h3>
+                    <p><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=dtss" data-eid="qd_A32" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/442ca2a7084790978a31adc848d73fad/0"><i class="op-tag"></i></a></p>
+                </dd>
+                
+                <dd>
+                    <h3>
+                        
+                        <span></span>
+                        
+                        <i>3-20</i><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=qjcs" data-eid="qd_A33" target="_blank">奇迹重生</a><strong>17区</strong></h3>
+                    <p><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=qjcs" data-eid="qd_A33" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/bca9c8b308a6f72bc4c37d78dd9d853f/0"><i class="op-tag"></i></a></p>
+                </dd>
+                
+                <dd>
+                    <h3>
+                        
+                        <span></span>
+                        
+                        <i>3-19</i><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=jyyx" data-eid="qd_A34" target="_blank">锦衣夜行</a><strong>19区</strong></h3>
+                    <p><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=jyyx" data-eid="qd_A34" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/506f17a14ea71e6fe7313b0c644bc219/0"><i class="op-tag"></i></a></p>
+                </dd>
+                
+                <dd>
+                    <h3>
+                        
+                        <span></span>
+                        
+                        <i>3-19</i><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=zjzr" data-eid="qd_A35" target="_blank">最佳阵容</a><strong>4区</strong></h3>
+                    <p><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=zjzr" data-eid="qd_A35" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/4df0f6d094b94841b35b4b7e8d6e9545/0"><i class="op-tag"></i></a></p>
+                </dd>
+                
+                <dd>
+                    <h3>
+                        
+                        <span></span>
+                        
+                        <i>3-19</i><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=mhj" data-eid="qd_A36" target="_blank">莽荒纪</a><strong>88区</strong></h3>
+                    <p><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=mhj" data-eid="qd_A36" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/25214d16d611c7930f7841f223f1403c/0"><i class="op-tag"></i></a></p>
+                </dd>
+                
+                <dd>
+                    <h3>
+                        
+                        <span></span>
+                        
+                        <i>3-19</i><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=jxqy2" data-eid="qd_A37" target="_blank">剑侠情缘2网页版</a><strong>19区</strong></h3>
+                    <p><a href="http://cpgame.qd.game.qidian.com/Home/GameServer/lists?name=jxqy2" data-eid="qd_A37" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/3e832e0ef9576ca3a6952fa7b93936a3/0"><i class="op-tag"></i></a></p>
+                </dd>
+                
+            </dl>
+            <div class="bottom">
+                <h4>悬赏</h4>
+                <p><a href="http://xs.game.qidian.com/?qd_game_key=xs192x86&amp;qd_dd_p1=124" data-eid="qd_A38" target="_blank"><img src="//qidian.qpic.cn/qidian_common/349573/88abf71a366b64ef0b5d53cf58d747ca/0"><span class="op-tag"></span></a></p>
+            </div>
+        </div>
+        <!-- end 页游列表 -->
+    </div>
+    <!-- end 页游下拉框 -->
+</li>
+            <!-- end 页游手游 -->
+        </ul>
+    </div>
+</div>
+    <!-- end 主导航 -->
+
+    <!-- start 全部作品容器 -->
+    <div class="all-pro-wrap box-center cf">
+        <!-- start 侧边栏筛选条件 -->
+        <!--完本、全本、免费频道左边菜单栏-->
+<div class="range-sidebar fl" data-l1="4">
+    <!-- start 选择站点 -->
+    <div class="site" data-l2="1">
+        <a class="act" href="javascript:">男生</a><a href="http://all.qdmm.com/Default.aspx" target="_blank" data-eid="qd_B15">女生</a>
+    </div>
+    <!-- end 选择站点 -->
+    <!-- start 已选-->
+    <div class="selected" data-l2="2">
+        
+        <p><span>已选</span>
+            
+            <a href="javascript:" data-eid="qd_B16" type="sign">精品<cite class="iconfont">&#xe61f;</cite></a>
+            
+    </div>
+    <!-- end 已选-->
+    <!-- start 条件筛选列表 -->
+    <div class="select-list">
+        <!-- start 作品分类 -->
+        <div class="work-filter type-filter" data-l2="3">
+            
+            
+            <h3>分类</h3>
+            <!-- 第一行一级分类 cite和i是嵌套的小三角-->
+            <ul class="row-1" type="category">
+                <li id="all" data-id="-1" class=act><a href="javascript:" data-eid="qd_B17">全部</a></li>
+                <li data-id="21" id="xh" class=""><a href="javascript:" data-eid="qd_B18">玄幻<cite><i></i></cite></a></li>
+                <li data-id="1" id="qh" class=""><a href="javascript:"  data-eid="qd_B19">奇幻<cite><i></i></cite></a></li>
+                <li data-id="2" id="wx" class=""><a href="javascript:"  data-eid="qd_B20">武侠<cite><i></i></cite></a></li>
+                <li data-id="22" id="xx" class=""><a href="javascript:" data-eid="qd_B21">仙侠<cite><i></i></cite></a></li>
+            </ul>
+            <!-- 点击后展示对应的子分类 默认隐藏 目前是为了展示选中一级分类时的状态 -->
+            <!-- 跳转回显页面时，先隐藏所有的sub-type，然后重新显示对应行的子分类 -->
+            
+            <div class="sub-type hidden">
+                <!--玄幻start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="8" class=""><a href="javascript:">东方玄幻</a></dd>
+                    
+                    <dd data-subtype="73" class=""><a href="javascript:">异世大陆</a></dd>
+                    
+                    <dd data-subtype="58" class=""><a href="javascript:">王朝争霸</a></dd>
+                    
+                    <dd data-subtype="78" class=""><a href="javascript:">高武世界</a></dd>
+                    
+                </dl>
+                <!--玄幻end-->
+                <!--奇幻start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="38" class=""><a href="javascript:">现代魔法</a></dd>
+                    
+                    <dd data-subtype="62" class=""><a href="javascript:">剑与魔法</a></dd>
+                    
+                    <dd data-subtype="201" class=""><a href="javascript:">史诗奇幻</a></dd>
+                    
+                    <dd data-subtype="202" class=""><a href="javascript:">黑暗幻想</a></dd>
+                    
+                    <dd data-subtype="20092" class=""><a href="javascript:">历史神话</a></dd>
+                    
+                    <dd data-subtype="20093" class=""><a href="javascript:">另类幻想</a></dd>
+                    
+                </dl>
+                <!--奇幻end-->
+                <!--武侠start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="5" class=""><a href="javascript:">传统武侠</a></dd>
+                    
+                    <dd data-subtype="30" class=""><a href="javascript:">武侠幻想</a></dd>
+                    
+                    <dd data-subtype="206" class=""><a href="javascript:">国术无双</a></dd>
+                    
+                </dl>
+                <!--武侠end-->
+                <!--仙侠start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="18" class=""><a href="javascript:">修真文明</a></dd>
+                    
+                    <dd data-subtype="44" class=""><a href="javascript:">幻想修仙</a></dd>
+                    
+                    <dd data-subtype="64" class=""><a href="javascript:">现代修真</a></dd>
+                    
+                    <dd data-subtype="207" class=""><a href="javascript:">神话修真</a></dd>
+                    
+                </dl>
+                <!--仙侠end-->
+            </div>
+            <!-- 第二行一级分类 -->
+            
+
+            <ul class="row-2" type="category">
+                <li data-id="4" id="ds" class=""><a href="javascript:" data-eid="qd_B22">都市<cite><i></i></cite></a></li>
+                <li data-id="15" id="zc" class=""><a href="javascript:" data-eid="qd_B23">职场<cite><i></i></cite></a></li>
+                <li data-id="6" id="js" class=""><a href="javascript:" data-eid="qd_B24">军事<cite><i></i></cite></a></li>
+                <li data-id="5" id="ls" class=""><a href="javascript:" data-eid="qd_B25">历史<cite><i></i></cite></a></li>
+                <li data-id="7" id="yx" class=""><a href="javascript:" data-eid="qd_B26">游戏<cite><i></i></cite></a></li>
+            </ul>
+            <!-- 点击后展示对应的子分类 默认隐藏 -->
+            
+            <div class="sub-type hidden">
+                <!--都市start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="12" class=""><a href="javascript:">都市生活</a></dd>
+                    
+                    <dd data-subtype="16" class=""><a href="javascript:">恩怨情仇</a></dd>
+                    
+                    <dd data-subtype="74" class=""><a href="javascript:">异术超能</a></dd>
+                    
+                    <dd data-subtype="209" class=""><a href="javascript:">现实百态</a></dd>
+                    
+                    <dd data-subtype="6" class=""><a href="javascript:">爱情婚姻</a></dd>
+                    
+                    <dd data-subtype="130" class=""><a href="javascript:">青春校园</a></dd>
+                    
+                </dl>
+                <!--都市end-->
+                <!--职场start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="151" class=""><a href="javascript:">娱乐明星</a></dd>
+                    
+                    <dd data-subtype="152" class=""><a href="javascript:">官场沉浮</a></dd>
+                    
+                    <dd data-subtype="153" class=""><a href="javascript:">商战职场</a></dd>
+                    
+                </dl>
+                <!--职场end-->
+                <!--军事start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="54" class=""><a href="javascript:">军旅生涯</a></dd>
+                    
+                    <dd data-subtype="65" class=""><a href="javascript:">军事战争</a></dd>
+                    
+                    <dd data-subtype="80" class=""><a href="javascript:">战争幻想</a></dd>
+                    
+                    <dd data-subtype="230" class=""><a href="javascript:">抗战烽火</a></dd>
+                    
+                    <dd data-subtype="231" class=""><a href="javascript:">谍战特工</a></dd>
+                    
+                </dl>
+                <!--军事end-->
+                <!--历史start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="22" class=""><a href="javascript:">架空历史</a></dd>
+                    
+                    <dd data-subtype="48" class=""><a href="javascript:">秦汉三国</a></dd>
+                    
+                    <dd data-subtype="220" class=""><a href="javascript:">上古先秦</a></dd>
+                    
+                    <dd data-subtype="32" class=""><a href="javascript:">历史传记</a></dd>
+                    
+                    <dd data-subtype="222" class=""><a href="javascript:">两晋隋唐</a></dd>
+                    
+                    <dd data-subtype="223" class=""><a href="javascript:">五代十国</a></dd>
+                    
+                    <dd data-subtype="224" class=""><a href="javascript:">两宋元明</a></dd>
+                    
+                    <dd data-subtype="225" class=""><a href="javascript:">清史民国</a></dd>
+                    
+                    <dd data-subtype="226" class=""><a href="javascript:">外国历史</a></dd>
+                    
+                    <dd data-subtype="20094" class=""><a href="javascript:">民间传说</a></dd>
+                    
+                </dl>
+                <!--历史end-->
+                <!--游戏start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="7" class=""><a href="javascript:">电子竞技</a></dd>
+                    
+                    <dd data-subtype="70" class=""><a href="javascript:">虚拟网游</a></dd>
+                    
+                    <dd data-subtype="76" class=""><a href="javascript:">游戏生涯</a></dd>
+                    
+                    <dd data-subtype="240" class=""><a href="javascript:">游戏异界</a></dd>
+                    
+                </dl>
+                <!--游戏end-->
+            </div>
+            <!-- 第三行一级分类 -->
+            
+            <ul class="row-3" type="category">
+                <li data-id="8" id="jj" class=""><a href="javascript:" data-eid="qd_B27">体育<cite><i></i></cite></a></li>
+                <li data-id="9" id="kh" class=""><a href="javascript:" data-eid="qd_B28">科幻<cite><i></i></cite></a></li>
+                <li data-id="10" id="ly" class=""><a href="javascript:" data-eid="qd_B29">灵异<cite><i></i></cite></a></li>
+                <li data-id="12" id="ecy" class=""><a href="javascript:" data-eid="qd_B30">二次元<cite><i></i></cite></a></li>
+                <li data-id="20076" id="dp" class=""><a href="javascript:" data-eid="qd_B70">短篇<cite><i></i></cite></a></li>
+            </ul>
+            <!-- 点击后展示对应的子分类 默认隐藏 -->
+            
+            <div class="sub-type hidden">
+
+                <!--竞技start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="28" class=""><a href="javascript:">篮球运动</a></dd>
+                    
+                    <dd data-subtype="55" class=""><a href="javascript:">体育赛事</a></dd>
+                    
+                    <dd data-subtype="82" class=""><a href="javascript:">足球运动</a></dd>
+                    
+                </dl>
+                <!--竞技end-->
+                <!--科幻start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="21" class=""><a href="javascript:">宇宙练功</a></dd>
+                    
+                    <dd data-subtype="25" class=""><a href="javascript:">未来世界</a></dd>
+                    
+                    <dd data-subtype="68" class=""><a href="javascript:">星际文明</a></dd>
+                    
+                    <dd data-subtype="250" class=""><a href="javascript:">超级科技</a></dd>
+                    
+                    <dd data-subtype="251" class=""><a href="javascript:">时空穿梭</a></dd>
+                    
+                    <dd data-subtype="252" class=""><a href="javascript:">进化变异</a></dd>
+                    
+                    <dd data-subtype="253" class=""><a href="javascript:">末世危机</a></dd>
+                    
+                </dl>
+                <!--科幻end-->
+                <!--灵异start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="26" class=""><a href="javascript:">恐怖惊悚</a></dd>
+                    
+                    <dd data-subtype="35" class=""><a href="javascript:">灵异鬼怪</a></dd>
+                    
+                    <dd data-subtype="57" class=""><a href="javascript:">悬疑侦探</a></dd>
+                    
+                    <dd data-subtype="260" class=""><a href="javascript:">寻墓探险</a></dd>
+                    
+                    <dd data-subtype="20095" class=""><a href="javascript:">风水秘术</a></dd>
+                    
+                </dl>
+                <!--灵异end-->
+                <!--二次元start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="10" class=""><a href="javascript:">变身入替</a></dd>
+                    
+                    <dd data-subtype="60" class=""><a href="javascript:">原生幻想</a></dd>
+                    
+                    <dd data-subtype="66" class=""><a href="javascript:">青春日常</a></dd>
+                    
+                    <dd data-subtype="281" class=""><a href="javascript:">衍生同人</a></dd>
+                    
+                    <dd data-subtype="282" class=""><a href="javascript:">搞笑吐槽</a></dd>
+                    
+                </dl>
+                <!--二次元end-->
+                <!--短篇start-->
+                <dl class="hidden">
+                    
+                    
+                    <dd data-subtype="20097" class=""><a href="javascript:">诗歌散文</a></dd>
+                    
+                    <dd data-subtype="20098" class=""><a href="javascript:">人物传记</a></dd>
+                    
+                    <dd data-subtype="20075" class=""><a href="javascript:">影视剧本</a></dd>
+                    
+                    <dd data-subtype="20077" class=""><a href="javascript:">评论文集</a></dd>
+                    
+                    <dd data-subtype="20078" class=""><a href="javascript:">生活随笔</a></dd>
+                    
+                    <dd data-subtype="20079" class=""><a href="javascript:">美文游记</a></dd>
+                    
+                    <dd data-subtype="20081" class=""><a href="javascript:">儿童文学</a></dd>
+                    
+                    <dd data-subtype="20096" class=""><a href="javascript:">短篇小说</a></dd>
+                    
+                </dl>
+                <!--短篇end-->
+            </div>
+        </div>
+        <!-- end 作品分类 -->
+        <!-- start 作品状态 -->
+        
+        <div class="work-filter action-filter" data-l2="4">
+            
+            <h3>状态</h3>
+            <ul type="action">
+                <li data-id="-1" class=act><a href="javascript:" data-eid="qd_B31">全部</a></li>
+                <li data-id="0" ><a href="javascript:" data-eid="qd_B32">连载</a></li>
+                <li data-id="1" ><a href="javascript:" data-eid="qd_B33">完本</a></li>
+            </ul>
+        </div>
+        
+        <!-- end 作品状态 -->
+        <!-- start 作品属性 -->
+        
+        
+        <div class="work-filter vip-filter" data-l2="5">
+
+            <h3>属性</h3>
+            <ul type="vip">
+                <li data-id="-1" class=act><a href="javascript:" data-eid="qd_B34">全部</a></li>
+                <li data-id="0" ><a href="javascript:" data-eid="qd_B35">免费</a></li>
+                <li data-id="1" -1><a href="javascript:" data-eid="qd_B36">VIP</a></li>
+            </ul>
+        </div>
+        
+
+        <!-- end 作品属性 -->
+        <!-- start 作品字数 -->
+        <div class="work-filter" data-l2="6">
+            
+            <h3>字数</h3>
+            <ul type="size">
+                <li data-id="-1" class=act><a href="javascript:" data-eid="qd_B37">全部</a></li>
+                <li data-id="1" ><a href="javascript:" data-eid="qd_B38">30万字以下</a></li>
+                <li data-id="2" ><a href="javascript:" data-eid="qd_B39">30-50万字</a></li>
+                <li data-id="3" ><a href="javascript:" data-eid="qd_B40">50-100万字</a></li>
+                <li data-id="4" ><a href="javascript:" data-eid="qd_B41">100-200万字</a></li>
+                <li data-id="5" ><a href="javascript:" data-eid="qd_B42">200万字以上</a></li>
+            </ul>
+        </div>
+        <!-- end 作品字数 -->
+        <!-- start 作品品质 -->
+        <div class="work-filter"  data-l2="7">
+            
+            <h3>品质</h3>
+            <ul type="sign">
+                <li data-id="-1" ><a href="javascript:" data-eid="qd_B43">全部</a></li>
+                <li data-id="1" ><a href="javascript:" data-eid="qd_B44">签约作品</a></li>
+                <li data-id="2" class=act><a href="javascript:" data-eid="qd_B45">精品小说</a></li>
+            </ul>
+        </div>
+        <!-- end 作品品质 -->
+        <!-- start 更新时间-->
+        <div class="work-filter"  data-l2="9">
+            
+            <h3>更新时间</h3>
+            <ul type="update">
+                <li data-id="-1" class=act><a href="javascript:" data-eid="qd_B71">全部</a></li>
+                <li data-id="1" ><a href="javascript:" data-eid="qd_B72">三日内</a></li>
+                <li data-id="2" ><a href="javascript:" data-eid="qd_B73">七日内</a></li>
+                <li data-id="3" ><a href="javascript:" data-eid="qd_B74">半月内</a></li>
+                <li data-id="4" ><a href="javascript:" data-eid="qd_B75">一月内</a></li>
+            </ul>
+        </div>
+        <!-- end 更新时间 -->
+        <!-- start 作品标签 -->
+        <div class="work-filter tag" data-l2="8" >
+            <h3>标签</h3>
+            
+            <ul type="tag">
+                
+                <li  data-eid="qd_B46" class='act'><a href="javascript:">全部</a></li>
+                
+                <li data-eid="qd_B47" data-tid="豪门" ><a href="javascript:" >豪门</a></li>
+                
+                <li data-eid="qd_B47" data-tid="孤儿" ><a href="javascript:" >孤儿</a></li>
+                
+                <li data-eid="qd_B47" data-tid="盗贼" ><a href="javascript:" >盗贼</a></li>
+                
+                <li data-eid="qd_B47" data-tid="特工" ><a href="javascript:" >特工</a></li>
+                
+                <li data-eid="qd_B47" data-tid="黑客" ><a href="javascript:" >黑客</a></li>
+                
+                <li data-eid="qd_B47" data-tid="明星" ><a href="javascript:" >明星</a></li>
+                
+                <li data-eid="qd_B47" data-tid="特种兵" ><a href="javascript:" >特种兵</a></li>
+                
+                <li data-eid="qd_B47" data-tid="杀手" ><a href="javascript:" >杀手</a></li>
+                
+                <li data-eid="qd_B47" data-tid="老师" ><a href="javascript:" >老师</a></li>
+                
+                <li data-eid="qd_B47" data-tid="学生" ><a href="javascript:" >学生</a></li>
+                
+
+                <!-- 预先被隐藏的标签 -->
+                
+                <li class="more" id="unfold"><a href="javascript:" data-eid="qd_B48">展开<span><i></i></span></a></li>
+                
+                <li data-eid="qd_B47" data-tid="胖子" class="hidden"><a href="javascript:">胖子</a></li>
+                
+                <li data-eid="qd_B47" data-tid="宠物" class="hidden"><a href="javascript:">宠物</a></li>
+                
+                <li data-eid="qd_B47" data-tid="蜀山" class="hidden"><a href="javascript:">蜀山</a></li>
+                
+                <li data-eid="qd_B47" data-tid="魔王附体" class="hidden"><a href="javascript:">魔王附体</a></li>
+                
+                <li data-eid="qd_B47" data-tid="LOL" class="hidden"><a href="javascript:">LOL</a></li>
+                
+                <li data-eid="qd_B47" data-tid="废材流" class="hidden"><a href="javascript:">废材流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="护短" class="hidden"><a href="javascript:">护短</a></li>
+                
+                <li data-eid="qd_B47" data-tid="卡片" class="hidden"><a href="javascript:">卡片</a></li>
+                
+                <li data-eid="qd_B47" data-tid="手游" class="hidden"><a href="javascript:">手游</a></li>
+                
+                <li data-eid="qd_B47" data-tid="法师" class="hidden"><a href="javascript:">法师</a></li>
+                
+                <li data-eid="qd_B47" data-tid="医生" class="hidden"><a href="javascript:">医生</a></li>
+                
+                <li data-eid="qd_B47" data-tid="感情" class="hidden"><a href="javascript:">感情</a></li>
+                
+                <li data-eid="qd_B47" data-tid="鉴宝" class="hidden"><a href="javascript:">鉴宝</a></li>
+                
+                <li data-eid="qd_B47" data-tid="亡灵" class="hidden"><a href="javascript:">亡灵</a></li>
+                
+                <li data-eid="qd_B47" data-tid="职场" class="hidden"><a href="javascript:">职场</a></li>
+                
+                <li data-eid="qd_B47" data-tid="吸血鬼" class="hidden"><a href="javascript:">吸血鬼</a></li>
+                
+                <li data-eid="qd_B47" data-tid="龙" class="hidden"><a href="javascript:">龙</a></li>
+                
+                <li data-eid="qd_B47" data-tid="西游" class="hidden"><a href="javascript:">西游</a></li>
+                
+                <li data-eid="qd_B47" data-tid="鬼怪" class="hidden"><a href="javascript:">鬼怪</a></li>
+                
+                <li data-eid="qd_B47" data-tid="阵法" class="hidden"><a href="javascript:">阵法</a></li>
+                
+                <li data-eid="qd_B47" data-tid="魔兽" class="hidden"><a href="javascript:">魔兽</a></li>
+                
+                <li data-eid="qd_B47" data-tid="勇猛" class="hidden"><a href="javascript:">勇猛</a></li>
+                
+                <li data-eid="qd_B47" data-tid="玄学" class="hidden"><a href="javascript:">玄学</a></li>
+                
+                <li data-eid="qd_B47" data-tid="群穿" class="hidden"><a href="javascript:">群穿</a></li>
+                
+                <li data-eid="qd_B47" data-tid="丹药" class="hidden"><a href="javascript:">丹药</a></li>
+                
+                <li data-eid="qd_B47" data-tid="练功流" class="hidden"><a href="javascript:">练功流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="召唤流" class="hidden"><a href="javascript:">召唤流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="恶搞" class="hidden"><a href="javascript:">恶搞</a></li>
+                
+                <li data-eid="qd_B47" data-tid="爆笑" class="hidden"><a href="javascript:">爆笑</a></li>
+                
+                <li data-eid="qd_B47" data-tid="轻松" class="hidden"><a href="javascript:">轻松</a></li>
+                
+                <li data-eid="qd_B47" data-tid="冷酷" class="hidden"><a href="javascript:">冷酷</a></li>
+                
+                <li data-eid="qd_B47" data-tid="腹黑" class="hidden"><a href="javascript:">腹黑</a></li>
+                
+                <li data-eid="qd_B47" data-tid="阳光" class="hidden"><a href="javascript:">阳光</a></li>
+                
+                <li data-eid="qd_B47" data-tid="狡猾" class="hidden"><a href="javascript:">狡猾</a></li>
+                
+                <li data-eid="qd_B47" data-tid="机智" class="hidden"><a href="javascript:">机智</a></li>
+                
+                <li data-eid="qd_B47" data-tid="猥琐" class="hidden"><a href="javascript:">猥琐</a></li>
+                
+                <li data-eid="qd_B47" data-tid="嚣张" class="hidden"><a href="javascript:">嚣张</a></li>
+                
+                <li data-eid="qd_B47" data-tid="淡定" class="hidden"><a href="javascript:">淡定</a></li>
+                
+                <li data-eid="qd_B47" data-tid="僵尸" class="hidden"><a href="javascript:">僵尸</a></li>
+                
+                <li data-eid="qd_B47" data-tid="丧尸" class="hidden"><a href="javascript:">丧尸</a></li>
+                
+                <li data-eid="qd_B47" data-tid="盗墓" class="hidden"><a href="javascript:">盗墓</a></li>
+                
+                <li data-eid="qd_B47" data-tid="随身流" class="hidden"><a href="javascript:">随身流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="软饭流" class="hidden"><a href="javascript:">软饭流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="无敌文" class="hidden"><a href="javascript:">无敌文</a></li>
+                
+                <li data-eid="qd_B47" data-tid="异兽流" class="hidden"><a href="javascript:">异兽流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="系统流" class="hidden"><a href="javascript:">系统流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="洪荒流" class="hidden"><a href="javascript:">洪荒流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="学院流" class="hidden"><a href="javascript:">学院流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="位面" class="hidden"><a href="javascript:">位面</a></li>
+                
+                <li data-eid="qd_B47" data-tid="铁血" class="hidden"><a href="javascript:">铁血</a></li>
+                
+                <li data-eid="qd_B47" data-tid="励志" class="hidden"><a href="javascript:">励志</a></li>
+                
+                <li data-eid="qd_B47" data-tid="坚毅" class="hidden"><a href="javascript:">坚毅</a></li>
+                
+                <li data-eid="qd_B47" data-tid="变身" class="hidden"><a href="javascript:">变身</a></li>
+                
+                <li data-eid="qd_B47" data-tid="强者回归" class="hidden"><a href="javascript:">强者回归</a></li>
+                
+                <li data-eid="qd_B47" data-tid="赚钱" class="hidden"><a href="javascript:">赚钱</a></li>
+                
+                <li data-eid="qd_B47" data-tid="争霸流" class="hidden"><a href="javascript:">争霸流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="种田文" class="hidden"><a href="javascript:">种田文</a></li>
+                
+                <li data-eid="qd_B47" data-tid="宅男" class="hidden"><a href="javascript:">宅男</a></li>
+                
+                <li data-eid="qd_B47" data-tid="无限流" class="hidden"><a href="javascript:">无限流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="技术流" class="hidden"><a href="javascript:">技术流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="凡人流" class="hidden"><a href="javascript:">凡人流</a></li>
+                
+                <li data-eid="qd_B47" data-tid="热血" class="hidden"><a href="javascript:">热血</a></li>
+                
+                <li data-eid="qd_B47" data-tid="重生" class="hidden"><a href="javascript:">重生</a></li>
+                
+                <li data-eid="qd_B47" data-tid="穿越" class="hidden"><a href="javascript:">穿越</a></li>
+                
+            </ul>
+        </div>
+        <!-- end 作品标签 -->
+    </div>
+    <!-- end 条件筛选列表 -->
+</div>
+        <!-- end 侧边栏筛选条件 -->
+        <!-- start 全部作品内容区 -->
+        <div class="main-content-wrap fl" data-l1="5">
+            <!-- start 操作栏 -->
+            <!--全部作品页、完本作品页、免费作品页列表上方操作栏 start-->
+
+<div class="tool-bar cf">
+    <div class="view-mode" id="view-mode">
+        <a id="img-text" class="iconfont " href="javascript:" data-eid="qd_B54">&#xe618;</a><em>|</em><a id="only-text" class="iconfont  act" href="javascript:" data-eid="qd_B55">&#xe61a;</a>
+    </div>
+    <div class="select-wrap">
+        
+        <a data-id=""  href="javascript:" data-eid="qd_B62">人气排序</a>
+        <a data-id="5"  href="javascript:" data-eid="qd_B49">更新时间</a>
+        <a data-id="11" class=act href="javascript:" data-eid="qd_B80">总收藏<cite class="iconfont">&#xe625;</cite></a>
+        <a data-id="3"  href="javascript:" data-eid="qd_B52">总字数</a>
+        <div id="vipClicks" class="lbf-combobox vipClicks">
+            
+            <!-- 当前选中项信息 -->
+            <a href="javascript:" class="lbf-button lbf-combobox-label " hidefocus="true">
+                <span class="lbf-combobox-caption">会员点击</span>
+                <span class="lbf-combobox-icon">&nbsp;</span>
+            </a>
+        </div>
+        
+        <div id="recomm" class="lbf-combobox">
+            <!-- 当前选中项信息 -->
+            <a href="javascript:" class="lbf-button lbf-combobox-label " hidefocus="true">
+                <span class="lbf-combobox-caption">推荐票</span>
+                <span class="lbf-combobox-icon">&nbsp;</span>
+            </a>
+        </div>
+        <em>|</em>
+                                <span class="lbf-checkbox get-new-book " data-eid="qd_B53">
+                                    <input id="only" type="checkbox" />
+                                </span>
+        <label for="only" data-eid="qd_B53">只看3个月内新书</label>
+        <div class="sort-count count-info" id="sort-count">
+            <div class="count-text">共<span>961</span>本相关作品
+            </div>
+            <div class="yiwen" id="yiwen">
+                <div class="iconfont">&#xe620;</div>
+            </div>
+            <i>|</i>
+        </div>
+    </div>
+</div>
+<!--全部作品页、完本作品页、免费作品页列表上方操作栏 end-->
+            <!-- end 操作栏 -->
+            <!-- start 全部作品列表 -->
+           <!-- start 暂无数据 -->
+
+<div class="all-book-list">
+    
+    <!-- end 图文模式 -->
+    <!-- start 文字表格模式 预先隐藏，切换时显示，隐藏图文模式 -->
+    
+    <div class="book-text">
+        <table class="rank-table-list all" width="100%">
+            <colgroup>
+                <col width="15%">
+                <col width="17%">
+                <col width="33%">
+                <col width="9%">
+                <col width="12%">
+                <col width="13%">
+            </colgroup>
+            
+            <thead>
+            <tr>
+                <th>类别</th>
+                <th>小说书名</th>
+                <th>最新章节</th>
+                <th>字数</th>
+                <th>小说作者</th>
+                <th class="right">总收藏</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            <tr data-rid="1">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="44" href="javascript:" data-eid="qd_B61">幻想修仙<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3676417" data-bid="3676417" data-eid="qd_B58" target="_blank">玄界之门</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3676417/356354594" data-cid="//vipreader.qidian.com/chapter/3676417/356354594" data-bid="3676417" target="_blank">第八百八十八章陌生的自己</a></td>
+                <td><span class="total">270.85万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362771" target="_blank" data-eid="qd_B59">忘语</a></td>
+                <td class="date">229.73万</td>
+            </tr>
+            
+            <tr data-rid="2">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="44" href="javascript:" data-eid="qd_B61">幻想修仙<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1003354631" data-bid="1003354631" data-eid="qd_B58" target="_blank">一念永恒</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1003354631/356314561" data-cid="//vipreader.qidian.com/chapter/1003354631/356314561" data-bid="1003354631" target="_blank">第669章天道元婴！</a></td>
+                <td><span class="total">194.77万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362120" target="_blank" data-eid="qd_B59">耳根</a></td>
+                <td class="date">204.92万</td>
+            </tr>
+            
+            <tr data-rid="3">
+                <td class="td-one"><a class="type" href="//zhichang.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>职场</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="15" data-subtypeId="151" href="javascript:" data-eid="qd_B61">娱乐明星<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3347598" data-bid="3347598" data-eid="qd_B58" target="_blank">我真是大明星</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3347598/356388944" data-cid="//vipreader.qidian.com/chapter/3347598/356388944" data-bid="3347598" target="_blank">第1496章【张烨的最后一首歌！】</a></td>
+                <td><span class="total">439.81万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362273" target="_blank" data-eid="qd_B59">尝谕</a></td>
+                <td class="date">153.42万</td>
+            </tr>
+            
+            <tr data-rid="4">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="73" href="javascript:" data-eid="qd_B61">异世大陆<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/2750457" data-bid="2750457" data-eid="qd_B58" target="_blank">大主宰</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/2750457/356420003" data-cid="//vipreader.qidian.com/chapter/2750457/356420003" data-bid="2750457" target="_blank">第一千四百五十五章准圣血精入手</a></td>
+                <td><span class="total">466.96万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=1019021" target="_blank" data-eid="qd_B59">天蚕土豆</a></td>
+                <td class="date">144.19万</td>
+            </tr>
+            
+            <tr data-rid="5">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="44" href="javascript:" data-eid="qd_B61">幻想修仙<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1003307568" data-bid="1003307568" data-eid="qd_B58" target="_blank">不朽凡人</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1003307568/356411220" data-cid="//vipreader.qidian.com/chapter/1003307568/356411220" data-bid="1003307568" target="_blank">第六百六十七章宗门选址</a></td>
+                <td><span class="total">198.36万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=2342811" target="_blank" data-eid="qd_B59">鹅是老五</a></td>
+                <td class="date">122.21万</td>
+            </tr>
+            
+            <tr data-rid="6">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="8" href="javascript:" data-eid="qd_B61">东方玄幻<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/2952453" data-bid="2952453" data-eid="qd_B58" target="_blank">完美世界</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/2952453/340495208" data-cid="//vipreader.qidian.com/chapter/2952453/340495208" data-bid="2952453" target="_blank">我的新书《圣墟》已上传</a></td>
+                <td><span class="total">658.34万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362453" target="_blank" data-eid="qd_B59">辰东</a></td>
+                <td class="date">119.69万</td>
+            </tr>
+            
+            <tr data-rid="7">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="73" href="javascript:" data-eid="qd_B61">异世大陆<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3513193" data-bid="3513193" data-eid="qd_B58" target="_blank">雪鹰领主</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3513193/356351861" data-cid="//vipreader.qidian.com/chapter/3513193/356351861" data-bid="3513193" target="_blank">第35篇第36章虚界幻境第一人</a></td>
+                <td><span class="total">301.81万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362096" target="_blank" data-eid="qd_B59">我吃西红柿</a></td>
+                <td class="date">117.46万</td>
+            </tr>
+            
+            <tr data-rid="8">
+                <td class="td-one"><a class="type" href="//qihuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>奇幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="1" data-subtypeId="38" href="javascript:" data-eid="qd_B61">现代魔法<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/173050" data-bid="173050" data-eid="qd_B58" target="_blank">琴帝</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/173050/22109802" data-cid="//vipreader.qidian.com/chapter/173050/22109802" data-bid="173050" target="_blank">第三百三十六章大结局，对不起，杀了你（下）</a></td>
+                <td><span class="total">319.05万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4921" target="_blank" data-eid="qd_B59">唐家三少</a></td>
+                <td class="date">113.71万</td>
+            </tr>
+            
+            <tr data-rid="9">
+                <td class="td-one"><a class="type" href="//dushi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>都市</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="4" data-subtypeId="12" href="javascript:" data-eid="qd_B61">都市生活<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1003667321" data-bid="1003667321" data-eid="qd_B58" target="_blank">美食供应商</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1003667321/356408990" data-cid="//vipreader.qidian.com/chapter/1003667321/356408990" data-bid="1003667321" target="_blank">第四百五十四章麻辣汤锅的魅力</a></td>
+                <td><span class="total">98.08万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=7746844" target="_blank" data-eid="qd_B59">会做菜的猫</a></td>
+                <td class="date">101.86万</td>
+            </tr>
+            
+            <tr data-rid="10">
+                <td class="td-one"><a class="type" href="//qihuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>奇幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="1" data-subtypeId="62" href="javascript:" data-eid="qd_B61">剑与魔法<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1017141" data-bid="1017141" data-eid="qd_B58" target="_blank">盘龙</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1017141/88288139" data-cid="//vipreader.qidian.com/chapter/1017141/88288139" data-bid="1017141" target="_blank">番茄新书《雪鹰领主》五十万字了，可以看了~~</a></td>
+                <td><span class="total">332.77万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362096" target="_blank" data-eid="qd_B59">我吃西红柿</a></td>
+                <td class="date">100.38万</td>
+            </tr>
+            
+            <tr data-rid="11">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="8" href="javascript:" data-eid="qd_B61">东方玄幻<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1004608738" data-bid="1004608738" data-eid="qd_B58" target="_blank">圣墟</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1004608738/356404257" data-cid="//vipreader.qidian.com/chapter/1004608738/356404257" data-bid="1004608738" target="_blank">第二百八十四章海陆大决战！</a></td>
+                <td><span class="total">102.86万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362453" target="_blank" data-eid="qd_B59">辰东</a></td>
+                <td class="date">90.86万</td>
+            </tr>
+            
+            <tr data-rid="12">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="73" href="javascript:" data-eid="qd_B61">异世大陆<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1115277" data-bid="1115277" data-eid="qd_B58" target="_blank">斗罗大陆</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1115277/26041662" data-cid="//vipreader.qidian.com/chapter/1115277/26041662" data-bid="1115277" target="_blank">第二百三十六章大结局，最后一个条件（全书完）</a></td>
+                <td><span class="total">298.64万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4921" target="_blank" data-eid="qd_B59">唐家三少</a></td>
+                <td class="date">89.65万</td>
+            </tr>
+            
+            <tr data-rid="13">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="44" href="javascript:" data-eid="qd_B61">幻想修仙<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/118447" data-bid="118447" data-eid="qd_B58" target="_blank">星辰变</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/118447/88288153" data-cid="//vipreader.qidian.com/chapter/118447/88288153" data-bid="118447" target="_blank">番茄新书《雪鹰领主》五十万字了，可以看了~~</a></td>
+                <td><span class="total">280.77万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362096" target="_blank" data-eid="qd_B59">我吃西红柿</a></td>
+                <td class="date">84.51万</td>
+            </tr>
+            
+            <tr data-rid="14">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="44" href="javascript:" data-eid="qd_B61">幻想修仙<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/107580" data-bid="107580" data-eid="qd_B58" target="_blank">凡人修仙传</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/107580/91969281" data-cid="//vipreader.qidian.com/chapter/107580/91969281" data-bid="107580" target="_blank">忘语新书《玄界之门》</a></td>
+                <td><span class="total">747.85万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362771" target="_blank" data-eid="qd_B59">忘语</a></td>
+                <td class="date">80.53万</td>
+            </tr>
+            
+            <tr data-rid="15">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="18" href="javascript:" data-eid="qd_B61">修真文明<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1735921" data-bid="1735921" data-eid="qd_B58" target="_blank">遮天</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1735921/340500403" data-cid="//vipreader.qidian.com/chapter/1735921/340500403" data-bid="1735921" target="_blank">我的新书《圣墟》已上传</a></td>
+                <td><span class="total">635.31万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362453" target="_blank" data-eid="qd_B59">辰东</a></td>
+                <td class="date">72.71万</td>
+            </tr>
+            
+            <tr data-rid="16">
+                <td class="td-one"><a class="type" href="//qihuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>奇幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="1" data-subtypeId="201" href="javascript:" data-eid="qd_B61">史诗奇幻<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1003306811" data-bid="1003306811" data-eid="qd_B58" target="_blank">放开那个女巫</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1003306811/356425789" data-cid="//vipreader.qidian.com/chapter/1003306811/356425789" data-bid="1003306811" target="_blank">第六百五十章特殊的奴隶</a></td>
+                <td><span class="total">142.85万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=6052114" target="_blank" data-eid="qd_B59">二目</a></td>
+                <td class="date">72.2万</td>
+            </tr>
+            
+            <tr data-rid="17">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="73" href="javascript:" data-eid="qd_B61">异世大陆<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/63856" data-bid="63856" data-eid="qd_B58" target="_blank">神墓</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/63856/340494470" data-cid="//vipreader.qidian.com/chapter/63856/340494470" data-bid="63856" target="_blank">我的新书《圣墟》现已上传</a></td>
+                <td><span class="total">307.44万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362453" target="_blank" data-eid="qd_B59">辰东</a></td>
+                <td class="date">71.7万</td>
+            </tr>
+            
+            <tr data-rid="18">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="8" href="javascript:" data-eid="qd_B61">东方玄幻<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/2048120" data-bid="2048120" data-eid="qd_B58" target="_blank">武动乾坤</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/2048120/46403166" data-cid="//vipreader.qidian.com/chapter/2048120/46403166" data-bid="2048120" target="_blank">新书大主宰已发。</a></td>
+                <td><span class="total">393.45万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=1019021" target="_blank" data-eid="qd_B59">天蚕土豆</a></td>
+                <td class="date">71.52万</td>
+            </tr>
+            
+            <tr data-rid="19">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="73" href="javascript:" data-eid="qd_B61">异世大陆<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3362920" data-bid="3362920" data-eid="qd_B58" target="_blank">天域苍穹</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3362920/356307291" data-cid="//vipreader.qidian.com/chapter/3362920/356307291" data-bid="3362920" target="_blank">完本感言：我很不满意！！！</a></td>
+                <td><span class="total">516.66万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362475" target="_blank" data-eid="qd_B59">风凌天下</a></td>
+                <td class="date">70.59万</td>
+            </tr>
+            
+            <tr data-rid="20">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="18" href="javascript:" data-eid="qd_B61">修真文明<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/2502372" data-bid="2502372" data-eid="qd_B58" target="_blank">莽荒纪</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/2502372/88285032" data-cid="//vipreader.qidian.com/chapter/2502372/88285032" data-bid="2502372" target="_blank">番茄新书《雪鹰领主》五十万字了，可以看了~~</a></td>
+                <td><span class="total">417.9万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362096" target="_blank" data-eid="qd_B59">我吃西红柿</a></td>
+                <td class="date">69.18万</td>
+            </tr>
+            
+            <tr data-rid="21">
+                <td class="td-one"><a class="type" href="//wuxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>武侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="2" data-subtypeId="30" href="javascript:" data-eid="qd_B61">武侠幻想<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1321320" data-bid="1321320" data-eid="qd_B58" target="_blank">九鼎记</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1321320/88288145" data-cid="//vipreader.qidian.com/chapter/1321320/88288145" data-bid="1321320" target="_blank">番茄新书《雪鹰领主》五十万字了，可以看了~~</a></td>
+                <td><span class="total">202.61万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362096" target="_blank" data-eid="qd_B59">我吃西红柿</a></td>
+                <td class="date">63.31万</td>
+            </tr>
+            
+            <tr data-rid="22">
+                <td class="td-one"><a class="type" href="//qihuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>奇幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="1" data-subtypeId="38" href="javascript:" data-eid="qd_B61">现代魔法<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1436015" data-bid="1436015" data-eid="qd_B58" target="_blank">酒神</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1436015/30137780" data-cid="//vipreader.qidian.com/chapter/1436015/30137780" data-bid="1436015" target="_blank">第六百八十八章大结局！我就是你的烈焰啊！</a></td>
+                <td><span class="total">280.51万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4921" target="_blank" data-eid="qd_B59">唐家三少</a></td>
+                <td class="date">62.78万</td>
+            </tr>
+            
+            <tr data-rid="23">
+                <td class="td-one"><a class="type" href="//kehuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>科幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="9" data-subtypeId="25" href="javascript:" data-eid="qd_B61">未来世界<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1639199" data-bid="1639199" data-eid="qd_B58" target="_blank">吞噬星空</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1639199/88285039" data-cid="//vipreader.qidian.com/chapter/1639199/88285039" data-bid="1639199" target="_blank">番茄新书《雪鹰领主》五十万字了，可以看了~~</a></td>
+                <td><span class="total">477.33万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362096" target="_blank" data-eid="qd_B59">我吃西红柿</a></td>
+                <td class="date">62.13万</td>
+            </tr>
+            
+            <tr data-rid="24">
+                <td class="td-one"><a class="type" href="//dushi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>都市</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="4" data-subtypeId="74" href="javascript:" data-eid="qd_B61">异术超能<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1931432" data-bid="1931432" data-eid="qd_B58" target="_blank">校花的贴身高手</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1931432/356413995" data-cid="//vipreader.qidian.com/chapter/1931432/356413995" data-bid="1931432" target="_blank">第6105章悲伤的气氛</a></td>
+                <td><span class="total">1244.41万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362366" target="_blank" data-eid="qd_B59">鱼人二代</a></td>
+                <td class="date">61.1万</td>
+            </tr>
+            
+            <tr data-rid="25">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="8" href="javascript:" data-eid="qd_B61">东方玄幻<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1445033" data-bid="1445033" data-eid="qd_B58" target="_blank">武神</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1445033/30888564" data-cid="//vipreader.qidian.com/chapter/1445033/30888564" data-bid="1445033" target="_blank">新书已发，请多多捧场^_^</a></td>
+                <td><span class="total">478.63万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362761" target="_blank" data-eid="qd_B59">苍天白鹤</a></td>
+                <td class="date">60.63万</td>
+            </tr>
+            
+            <tr data-rid="26">
+                <td class="td-one"><a class="type" href="//dushi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>都市</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="4" data-subtypeId="74" href="javascript:" data-eid="qd_B61">异术超能<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3548786" data-bid="3548786" data-eid="qd_B58" target="_blank">重生之都市修仙</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3548786/356406430" data-cid="//vipreader.qidian.com/chapter/3548786/356406430" data-bid="3548786" target="_blank">第816章前恭后倨（第一更）</a></td>
+                <td><span class="total">247.67万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=133955" target="_blank" data-eid="qd_B59">十里剑神</a></td>
+                <td class="date">59.86万</td>
+            </tr>
+            
+            <tr data-rid="27">
+                <td class="td-one"><a class="type" href="//dushi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>都市</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="4" data-subtypeId="12" href="javascript:" data-eid="qd_B61">都市生活<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3079913" data-bid="3079913" data-eid="qd_B58" target="_blank">超品相师</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3079913/356412708" data-cid="//vipreader.qidian.com/chapter/3079913/356412708" data-bid="3079913" target="_blank">第2814章传承花落谁家？</a></td>
+                <td><span class="total">848.68万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=3692225" target="_blank" data-eid="qd_B59">九灯和善</a></td>
+                <td class="date">59.59万</td>
+            </tr>
+            
+            <tr data-rid="28">
+                <td class="td-one"><a class="type" href="//dushi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>都市</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="4" data-subtypeId="12" href="javascript:" data-eid="qd_B61">都市生活<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/158872" data-bid="158872" data-eid="qd_B58" target="_blank">隐杀</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/158872/33359327" data-cid="//vipreader.qidian.com/chapter/158872/33359327" data-bid="158872" target="_blank">终章记忆残片</a></td>
+                <td><span class="total">202.78万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362458" target="_blank" data-eid="qd_B59">愤怒的香蕉</a></td>
+                <td class="date">57.32万</td>
+            </tr>
+            
+            <tr data-rid="29">
+                <td class="td-one"><a class="type" href="//dushi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>都市</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="4" data-subtypeId="12" href="javascript:" data-eid="qd_B61">都市生活<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/174075" data-bid="174075" data-eid="qd_B58" target="_blank">史上第一混乱</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/174075/23610113" data-cid="//vipreader.qidian.com/chapter/174075/23610113" data-bid="174075" target="_blank">第三卷 史上第一混乱第二百一十八章史上第一混乱(全文终)</a></td>
+                <td><span class="total">181.37万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362926" target="_blank" data-eid="qd_B59">张小花</a></td>
+                <td class="date">56.85万</td>
+            </tr>
+            
+            <tr data-rid="30">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="64" href="javascript:" data-eid="qd_B61">现代修真<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3195551" data-bid="3195551" data-eid="qd_B58" target="_blank">造化之门</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3195551/305665603" data-cid="//vipreader.qidian.com/chapter/3195551/305665603" data-bid="3195551" target="_blank">第一五三零章五圣聚，造化生（大结局）</a></td>
+                <td><span class="total">476.09万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=2342811" target="_blank" data-eid="qd_B59">鹅是老五</a></td>
+                <td class="date">56.58万</td>
+            </tr>
+            
+            <tr data-rid="31">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="73" href="javascript:" data-eid="qd_B61">异世大陆<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/163560" data-bid="163560" data-eid="qd_B58" target="_blank">恶魔法则</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/163560/44325929" data-cid="//vipreader.qidian.com/chapter/163560/44325929" data-bid="163560" target="_blank">【恶魔法则后传已经开始了！】</a></td>
+                <td><span class="total">393.42万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362305" target="_blank" data-eid="qd_B59">跳舞</a></td>
+                <td class="date">55.09万</td>
+            </tr>
+            
+            <tr data-rid="32">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="44" href="javascript:" data-eid="qd_B61">幻想修仙<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1264634" data-bid="1264634" data-eid="qd_B58" target="_blank">仙逆</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1264634/36495782" data-cid="//vipreader.qidian.com/chapter/1264634/36495782" data-bid="1264634" target="_blank">第十三卷 灯火阑珊第2088章蓦然回首（结局）</a></td>
+                <td><span class="total">652.06万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362120" target="_blank" data-eid="qd_B59">耳根</a></td>
+                <td class="date">54.32万</td>
+            </tr>
+            
+            <tr data-rid="33">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="8" href="javascript:" data-eid="qd_B61">东方玄幻<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3552978" data-bid="3552978" data-eid="qd_B58" target="_blank">巫神纪</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3552978/355811863" data-cid="//vipreader.qidian.com/chapter/3552978/355811863" data-bid="3552978" target="_blank">3月18号的线下活动！</a></td>
+                <td><span class="total">412.28万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362118" target="_blank" data-eid="qd_B59">血红</a></td>
+                <td class="date">53.97万</td>
+            </tr>
+            
+            <tr data-rid="34">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="18" href="javascript:" data-eid="qd_B61">修真文明<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/27372" data-bid="27372" data-eid="qd_B58" target="_blank">邪风曲</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/27372/309015180" data-cid="//vipreader.qidian.com/chapter/27372/309015180" data-bid="27372" target="_blank">为了邪风曲！</a></td>
+                <td><span class="total">297.79万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362118" target="_blank" data-eid="qd_B59">血红</a></td>
+                <td class="date">53.17万</td>
+            </tr>
+            
+            <tr data-rid="35">
+                <td class="td-one"><a class="type" href="//dushi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>都市</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="4" data-subtypeId="12" href="javascript:" data-eid="qd_B61">都市生活<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3681640" data-bid="3681640" data-eid="qd_B58" target="_blank">重生完美时代</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3681640/356405091" data-cid="//vipreader.qidian.com/chapter/3681640/356405091" data-bid="3681640" target="_blank">第九百零一章形势不妙</a></td>
+                <td><span class="total">292.27万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=5171322" target="_blank" data-eid="qd_B59">公子不歌</a></td>
+                <td class="date">51.22万</td>
+            </tr>
+            
+            <tr data-rid="36">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="8" href="javascript:" data-eid="qd_B61">东方玄幻<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1097850" data-bid="1097850" data-eid="qd_B58" target="_blank">长生界</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1097850/340499436" data-cid="//vipreader.qidian.com/chapter/1097850/340499436" data-bid="1097850" target="_blank">我的新书《圣墟》已上传</a></td>
+                <td><span class="total">288.65万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362453" target="_blank" data-eid="qd_B59">辰东</a></td>
+                <td class="date">48.01万</td>
+            </tr>
+            
+            <tr data-rid="37">
+                <td class="td-one"><a class="type" href="//kehuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>科幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="9" data-subtypeId="253" href="javascript:" data-eid="qd_B61">末世危机<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3584300" data-bid="3584300" data-eid="qd_B58" target="_blank">颤栗世界</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3584300/341969997" data-cid="//vipreader.qidian.com/chapter/3584300/341969997" data-bid="3584300" target="_blank">第1416章清静（大结局）</a></td>
+                <td><span class="total">291.94万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362920" target="_blank" data-eid="qd_B59">奥比椰</a></td>
+                <td class="date">47.91万</td>
+            </tr>
+            
+            <tr data-rid="38">
+                <td class="td-one"><a class="type" href="//lishi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>历史</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="5" data-subtypeId="22" href="javascript:" data-eid="qd_B61">架空历史<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/114559" data-bid="114559" data-eid="qd_B58" target="_blank">庆余年</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/114559/23354423" data-cid="//vipreader.qidian.com/chapter/114559/23354423" data-bid="114559" target="_blank">新书间客，书号：1223147，欢迎大家践踏……</a></td>
+                <td><span class="total">379.31万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362908" target="_blank" data-eid="qd_B59">猫腻</a></td>
+                <td class="date">47.82万</td>
+            </tr>
+            
+            <tr data-rid="39">
+                <td class="td-one"><a class="type" href="//kehuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>科幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="9" data-subtypeId="21" href="javascript:" data-eid="qd_B61">宇宙练功<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/131957" data-bid="131957" data-eid="qd_B58" target="_blank">冒牌大英雄</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/131957/35152968" data-cid="//vipreader.qidian.com/chapter/131957/35152968" data-bid="131957" target="_blank">还有谁不知道新书《裁决》已经肥了快上架的？</a></td>
+                <td><span class="total">411.08万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362285" target="_blank" data-eid="qd_B59">七十二编</a></td>
+                <td class="date">47.37万</td>
+            </tr>
+            
+            <tr data-rid="40">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="73" href="javascript:" data-eid="qd_B61">异世大陆<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3681560" data-bid="3681560" data-eid="qd_B58" target="_blank">龙王传说</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3681560/354819965" data-cid="//vipreader.qidian.com/chapter/3681560/354819965" data-bid="3681560" target="_blank">第九百三十章以身为盾</a></td>
+                <td><span class="total">232.58万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4921" target="_blank" data-eid="qd_B59">唐家三少</a></td>
+                <td class="date">45.79万</td>
+            </tr>
+            
+            <tr data-rid="41">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="8" href="javascript:" data-eid="qd_B61">东方玄幻<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/3249362" data-bid="3249362" data-eid="qd_B58" target="_blank">一世之尊</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/3249362/328393012" data-cid="//vipreader.qidian.com/chapter/3249362/328393012" data-bid="3249362" target="_blank">新书上传，恳请支持</a></td>
+                <td><span class="total">443.71万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362088" target="_blank" data-eid="qd_B59">爱潜水的乌贼</a></td>
+                <td class="date">45.7万</td>
+            </tr>
+            
+            <tr data-rid="42">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="44" href="javascript:" data-eid="qd_B61">幻想修仙<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1502261" data-bid="1502261" data-eid="qd_B58" target="_blank">邪龙道</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1502261/31197686" data-cid="//vipreader.qidian.com/chapter/1502261/31197686" data-bid="1502261" target="_blank">完篇感言</a></td>
+                <td><span class="total">384.1万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362118" target="_blank" data-eid="qd_B59">血红</a></td>
+                <td class="date">45.42万</td>
+            </tr>
+            
+            <tr data-rid="43">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="18" href="javascript:" data-eid="qd_B61">修真文明<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1209022" data-bid="1209022" data-eid="qd_B58" target="_blank">逍行纪</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1209022/26722125" data-cid="//vipreader.qidian.com/chapter/1209022/26722125" data-bid="1209022" target="_blank">第四百二十二章尘归尘、土归土，一切的终结（大结局）</a></td>
+                <td><span class="total">220.22万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362118" target="_blank" data-eid="qd_B59">血红</a></td>
+                <td class="date">44.84万</td>
+            </tr>
+            
+            <tr data-rid="44">
+                <td class="td-one"><a class="type" href="//2cy.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>二次元</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="12" data-subtypeId="281" href="javascript:" data-eid="qd_B61">衍生同人<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1003714606" data-bid="1003714606" data-eid="qd_B58" target="_blank">火影之最强震遁</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1003714606/350832458" data-cid="//vipreader.qidian.com/chapter/1003714606/350832458" data-bid="1003714606" target="_blank">新书《神级剑魂系统》（附完本感言）</a></td>
+                <td><span class="total">138.39万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=8011607" target="_blank" data-eid="qd_B59">夜南听风</a></td>
+                <td class="date">44.8万</td>
+            </tr>
+            
+            <tr data-rid="45">
+                <td class="td-one"><a class="type" href="//xianxia.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>仙侠</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="22" data-subtypeId="44" href="javascript:" data-eid="qd_B61">幻想修仙<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1003723851" data-bid="1003723851" data-eid="qd_B58" target="_blank">天影</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1003723851/356387854" data-cid="//vipreader.qidian.com/chapter/1003723851/356387854" data-bid="1003723851" target="_blank">第三百五十二章蛮族之殇</a></td>
+                <td><span class="total">97.2万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=66" target="_blank" data-eid="qd_B59">萧鼎</a></td>
+                <td class="date">44.77万</td>
+            </tr>
+            
+            <tr data-rid="46">
+                <td class="td-one"><a class="type" href="//lishi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>历史</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="5" data-subtypeId="22" href="javascript:" data-eid="qd_B61">架空历史<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/105199" data-bid="105199" data-eid="qd_B58" target="_blank">极品家丁</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/105199/21702057" data-cid="//vipreader.qidian.com/chapter/105199/21702057" data-bid="105199" target="_blank">《家丁》的本质</a></td>
+                <td><span class="total">319.89万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=41172" target="_blank" data-eid="qd_B59">禹岩</a></td>
+                <td class="date">44.28万</td>
+            </tr>
+            
+            <tr data-rid="47">
+                <td class="td-one"><a class="type" href="//lishi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>历史</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="5" data-subtypeId="22" href="javascript:" data-eid="qd_B61">架空历史<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1979049" data-bid="1979049" data-eid="qd_B58" target="_blank">赘婿</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1979049/355830355" data-cid="//vipreader.qidian.com/chapter/1979049/355830355" data-bid="1979049" target="_blank">第七七四章众生皆苦 人间如梦（上）</a></td>
+                <td><span class="total">354.31万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362458" target="_blank" data-eid="qd_B59">愤怒的香蕉</a></td>
+                <td class="date">43.45万</td>
+            </tr>
+            
+            <tr data-rid="48">
+                <td class="td-one"><a class="type" href="//youxi.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>游戏</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="7" data-subtypeId="70" href="javascript:" data-eid="qd_B61">虚拟网游<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/22919" data-bid="22919" data-eid="qd_B58" target="_blank">从零开始</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/22919/257422717" data-cid="//vipreader.qidian.com/chapter/22919/257422717" data-bid="22919" target="_blank">第23卷 第六章放飞希望（完结篇）</a></td>
+                <td><span class="total">2018.08万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=13342" target="_blank" data-eid="qd_B59">雷云风暴</a></td>
+                <td class="date">42.82万</td>
+            </tr>
+            
+            <tr data-rid="49">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="58" href="javascript:" data-eid="qd_B61">王朝争霸<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/20" data-bid="20" data-eid="qd_B58" target="_blank">紫川</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/20/22752896" data-cid="//vipreader.qidian.com/chapter/20/22752896" data-bid="20" target="_blank">第三十二集尘埃落定第六章帝国新生（下）全书完</a></td>
+                <td><span class="total">240.11万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362340" target="_blank" data-eid="qd_B59">老猪</a></td>
+                <td class="date">42.27万</td>
+            </tr>
+            
+            <tr data-rid="50">
+                <td class="td-one"><a class="type" href="//xuanhuan.qidian.com" data-eid="qd_B60" target="_blank"><em>「</em>玄幻</a><i class="point">&#183;</i><a class="go-sub-type" data-typeId="21" data-subtypeId="73" href="javascript:" data-eid="qd_B61">异世大陆<em>」</em></a></td>
+                <td><a class="name" href="//book.qidian.com/info/1004179514" data-bid="1004179514" data-eid="qd_B58" target="_blank">天道图书馆</a></td>
+                <td><a class="chapter" href="//vipreader.qidian.com/chapter/1004179514/356390132" data-cid="//vipreader.qidian.com/chapter/1004179514/356390132" data-bid="1004179514" target="_blank">第三百四十三章先天胎毒的解决方法</a></td>
+                <td><span class="total">96.46万</span></td>
+                <td><a class="author" href="http://me.qidian.com/authorIndex.aspx?id=4362968" target="_blank" data-eid="qd_B59">横扫天涯</a></td>
+                <td class="date">42.2万</td>
+            </tr>
+            
+
+            <!-- 此处重复 复制到40条数据 -->
+            </tbody>
+        </table>
+    </div>
+    
+<!-- end 文字表格模式 -->
+</div>
+<!-- start 分页 -->
+<div class="page-box cf">
+    <div class="pagination fr" data-eid="qd_C44" id="page-container" data-pageMax="20" data-page="1"></div>
+</div>
+<!-- end 分页 -->
+
+            <!-- end 全部作品列表 -->
+
+        </div>
+        <!-- end 全部作品内容区 -->
+    </div>
+    <!-- end 全部作品容器 -->
+    <!-- start 页脚 -->
+<div class="footer">
+    <!--start 友情链接-->
+    <div class="box-center cf">
+        <div class="friend-link">
+            <em><a class="yuewen" href="http://www.yuewen.com" target="_blank">阅文集团</a><cite>旗下网站：</cite></em>
+                <a href="//www.qidian.com">起点中文网</a>
+                <a href="//www.qdmm.com/Default.aspx" target="_blank">起点女生网</a>
+                <a href="http://chuangshi.qq.com" target="_blank">创世中文网</a>
+                <a href="http://yunqi.qq.com" target="_blank">云起书院</a>
+                <a href="http://www.rongshuxia.com" target="_blank">榕树下</a>
+                <a href="http://www.hongxiu.com" target="_blank">红袖添香</a>
+                <a href="http://yanqing.readnovel.com" target="_blank">小说阅读网</a>
+                <a href="http://www.xs8.cn" target="_blank">言情小说吧</a>
+                <a href="http://www.xxsy.net" target="_blank">潇湘书院</a>
+                <a href="http://www.tingbook.com" target="_blank">天方听书网</a>
+                <a href="http://www.lrts.me" target="_blank">懒人听书</a>
+                <a href="http://yuedu.yuewen.com" target="_blank">阅文悦读</a>
+                <a href="http://www.yuewen.com/app.html#appqq" target="_blank">QQ阅读</a>
+                <a href="http://www.yuewen.com/app.html#appqd" target="_blank">起点读书</a>
+                <a href="http://www.yuewen.com/app.html#appzj" target="_blank">作家助手</a>
+        </div>
+        <!--end 友情链接-->
+        <!--start 页脚菜单-->
+        <div class="footer-menu dib-wrap">
+            <a href="//www.qidian.com/about/intro" target="_blank">关于起点</a>
+            <a href="//www.qidian.com/about/contact" target="_blank">联系我们</a>
+            <a href="http://join.book.qq.com/index.html" target="_blank">加入我们</a>
+            <a href="//www.qidian.com/help/index/2" target="_blank">帮助中心</a>
+            <a href="http://bbs.qidian.com/list/53" target="_blank">提交建议</a>
+            <a href="http://wwwploy.qidian.com/help/about_link.aspx" target="_blank">合作伙伴</a>
+            <a href="http://bbs.qidian.com" target="_blank">起点论坛</a>
+            <a href="http://shop.qidian.com/Index.aspx" target="_blank">起点商城</a>
+        </div>
+        <!--end 页脚菜单-->
+        <!--start 版权-->
+        <div class="copy-right">
+            <p><span>Copyright &copy; 2002-2017 www.qidian.com All Right Reserved</span>版权所有 上海玄霆娱乐信息科技有限公司</p>
+            <p>上海玄霆娱乐信息科技有限公司 增值电信业务经营许可证沪B2-20080046 沪网文[2015]0081-031 新出网证（沪）字010 沪ICP备08017520号-1</p>
+            <p>请所有作者发布作品时务必遵守国家互联网信息管理办法规定，我们拒绝任何色情小说，一经发现，即作删除！举报电话：010-59357051</p>
+            <p>本站所收录作品、社区话题、书库评论及本站所做之广告均属个人行为，与本站立场无关</p>
+        </div>
+        <!--end 版权-->
+
+        
+    </div>
+</div>
+<!-- end 页脚 -->
+</div>
+<!-- start LBF lib -->
+<script data-ignore="true" src="//qidian.gtimg.com/lbf/1.0.2/LBF.js?max_age=31536000"></script>
+<script>
+    LBF.config({"paths":{"site":"//qidian.gtimg.com/qd/js","qd":"//qidian.gtimg.com/qd"},"vars":{"theme":"//qidian.gtimg.com/qd/css"},"combo":true,"debug":false});
+    // 全局的通用数据都放g_data变量里
+    var g_data = {};
+    // 环境变量，会按照环境选择性打log
+    g_data.envType = 'pro';
+    // 用作统计PV
+    g_data.pageId = 'qd_P_all';
+    //当前查询的参数
+    var params = {};
+    params.typeId = '-1';
+    params.subTypeId =  '-1';
+    params.actionId =  '-1';
+    params.vipId =  '-1';
+    params.sizeId = '-1';
+    params.signId =  '2';
+    params.tagName =  '&#34;-1&#34;';
+    params.orderId =  '11';
+    params.newIn3Month = '-1';
+    params.showId = '2';
+    params.updateId = '-1';
+    g_data.params = params;
+    //当前页面路由
+    g_data.url = '//a.qidian.com';
+    // 域名环境变量
+    g_data.domainSearch = 'se.qidian.com';
+    //环境域名
+    g_data.domainPreFix = '';
+</script>
+<script>
+    LBF.use(['lib.jQuery', 'monitor.SpeedReport', 'qd/js/all_finish_free/common.0.69.js','util.xssFilter'], function ($, SpeedReport, Common, xssFilter) {
+        // 页面逻辑入口
+        new Common({});
+        $(window).on('load.speedReport', function () {
+            // speedTimer[onload]
+            speedTimer.push(new Date().getTime());
+                var f1 = 7718, // china reading limited's ID
+                    f2 = 219, // site ID
+                    f3 = 10; // page ID
+            // chrome & IE9 Performance API
+            SpeedReport.reportPerformance({
+                flag1: f1,
+                flag2: f2,
+                flag3IE: f3,
+                flag3Chrome: f3,
+                rate:0.1,
+                url: '//isdspeed.qidian.com/cgi-bin/r.cgi'
+            });
+            // common speedTimer:['dom ready', 'onload']
+            var speedReport = SpeedReport.create({
+                flag1: f1,
+                flag2: f2,
+                flag3: f3,
+                start: speedZero,
+                rate:0.1,
+                url: '//isdspeed.qidian.com/cgi-bin/r.cgi'
+            });
+            // chrome & IE9 Performance API range 1~19, common speedTimer use 20+
+            for (var i = 0; i < speedTimer.length; i++) {
+                speedReport.add(speedTimer[i], i + 20)
+            }
+            // http://isdspeed.qq.com/cgi-bin/r.cgi?flag1=7718&flag2=224&flag3=1&1=38&2=38&…
+            speedReport.send();
+        })
+    });
+    // speedTimer[dom ready], put it before </body>
+    speedTimer.push(new Date().getTime());
+</script>
+<!-- end LBF lib -->
+
+</body>
+</html>
